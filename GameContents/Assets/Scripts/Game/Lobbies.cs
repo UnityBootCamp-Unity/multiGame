@@ -27,65 +27,67 @@ namespace Game.Lobbies {
             "Cg1sb2JiaWVzLnByb3RvEgxnYW1lLmxvYmJpZXMaDGNvbW1vbi5wcm90bxob",
             "Z29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
             "dGltZXN0YW1wLnByb3RvIkAKEkNyZWF0ZUxvYmJ5UmVxdWVzdBIWCg5ob3N0",
-            "X2NsaWVudF9pZBgBIAEoBRISCgptYXhfY2xpZW50GAIgASgFIicKE0NyZWF0",
-            "ZUxvYmJ5UmVzcG9uc2USEAoIbG9iYnlfaWQYASABKAUiNwoQSm9pbkxvYmJ5",
-            "UmVxdWVzdBIQCghsb2JieV9pZBgBIAEoBRIRCgljbGllbnRfaWQYAiABKAUi",
-            "jQEKEUpvaW5Mb2JieVJlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgSKwoKbG9i",
-            "YnlfaW5mbxgCIAEoCzIXLmdhbWUubG9iYmllcy5Mb2JieUluZm8SOgoTdXNl",
-            "cl9pbl9sb2JieV9pbmZvcxgDIAMoCzIdLmdhbWUubG9iYmllcy5Vc2VySW5M",
-            "b2JieUluZm8iOAoRTGVhdmVMb2JieVJlcXVlc3QSEAoIbG9iYnlfaWQYASAB",
-            "KAUSEQoJY2xpZW50X2lkGAIgASgFIiUKEkxlYXZlTG9iYnlSZXNwb25zZRIP",
-            "CgdzdWNjZXNzGAEgASgIIkQKFEdldExvYmJ5TGlzdFJlc3BvbnNlEiwKC2xv",
-            "YmJ5X2luZm9zGAEgAygLMhcuZ2FtZS5sb2JiaWVzLkxvYmJ5SW5mbyI8ChVT",
-            "dWJzY3JpYmVMb2JieVJlcXVlc3QSEAoIbG9iYnlfaWQYASABKAUSEQoJY2xp",
-            "ZW50X2lkGAIgASgFIqEBCh9TZXRMb2JieUN1c3RvbVByb3BlcnRpZXNSZXF1",
-            "ZXN0EhAKCGxvYmJ5X2lkGAEgASgFEkEKAmt2GAIgAygLMjUuZ2FtZS5sb2Ji",
-            "aWVzLlNldExvYmJ5Q3VzdG9tUHJvcGVydGllc1JlcXVlc3QuS3ZFbnRyeRop",
-            "CgdLdkVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiMwog",
-            "U2V0TG9iYnlDdXN0b21Qcm9wZXJ0aWVzUmVzcG9uc2USDwoHc3VjY2VzcxgB",
-            "IAEoCCLAAQolU2V0VXNlckluTG9iYnlDdXN0b21Qcm9wZXJ0aWVzUmVxdWVz",
-            "dBIQCghsb2JieV9pZBgBIAEoBRIRCgljbGllbnRfaWQYAiABKAUSRwoCa3YY",
-            "AyADKAsyOy5nYW1lLmxvYmJpZXMuU2V0VXNlckluTG9iYnlDdXN0b21Qcm9w",
-            "ZXJ0aWVzUmVxdWVzdC5LdkVudHJ5GikKB0t2RW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASI5CiZTZXRVc2VySW5Mb2JieUN1c3RvbVBy",
-            "b3BlcnRpZXNSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIIsICCgpMb2JieUV2",
-            "ZW50EjAKBHR5cGUYASABKA4yIi5nYW1lLmxvYmJpZXMuTG9iYnlFdmVudC5F",
-            "dmVudFR5cGUSEAoIbG9iYnlfaWQYAiABKAUSEQoJY2xpZW50X2lkGAMgASgF",
-            "EiwKAmt2GAQgAygLMiAuZ2FtZS5sb2JiaWVzLkxvYmJ5RXZlbnQuS3ZFbnRy",
-            "eRImCgJ0cxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAaKQoH",
-            "S3ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlwKCUV2",
-            "ZW50VHlwZRIPCgtNRU1CRVJfSk9JThAAEg8KC01FTUJFUl9MRUZUEAESFgoS",
-            "TE9CQllfUFJPUF9DSEFOR0VEEAISFQoRVVNFUl9QUk9QX0NIQU5HRUQQAyLg",
-            "AQoJTG9iYnlJbmZvEhAKCGxvYmJ5X2lkGAEgASgFEhYKDmhvc3RfY2xpZW50",
-            "X2lkGAIgASgFEhIKCm1heF9jbGllbnQYAyABKAUSEgoKbnVtX2NsaWVudBgE",
-            "IAEoBRJIChFjdXN0b21fcHJvcGVydGllcxgFIAMoCzItLmdhbWUubG9iYmll",
-            "cy5Mb2JieUluZm8uQ3VzdG9tUHJvcGVydGllc0VudHJ5GjcKFUN1c3RvbVBy",
-            "b3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "Iq0BCg9Vc2VySW5Mb2JieUluZm8SEQoJY2xpZW50X2lkGAEgASgFEk4KEWN1",
-            "c3RvbV9wcm9wZXJ0aWVzGAIgAygLMjMuZ2FtZS5sb2JiaWVzLlVzZXJJbkxv",
-            "YmJ5SW5mby5DdXN0b21Qcm9wZXJ0aWVzRW50cnkaNwoVQ3VzdG9tUHJvcGVy",
-            "dGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEyqwUK",
-            "DkxvYmJpZXNTZXJ2aWNlElIKC0NyZWF0ZUxvYmJ5EiAuZ2FtZS5sb2JiaWVz",
-            "LkNyZWF0ZUxvYmJ5UmVxdWVzdBohLmdhbWUubG9iYmllcy5DcmVhdGVMb2Ji",
-            "eVJlc3BvbnNlEkwKCUpvaW5Mb2JieRIeLmdhbWUubG9iYmllcy5Kb2luTG9i",
-            "YnlSZXF1ZXN0Gh8uZ2FtZS5sb2JiaWVzLkpvaW5Mb2JieVJlc3BvbnNlEk8K",
-            "CkxlYXZlTG9iYnkSHy5nYW1lLmxvYmJpZXMuTGVhdmVMb2JieVJlcXVlc3Qa",
-            "IC5nYW1lLmxvYmJpZXMuTGVhdmVMb2JieVJlc3BvbnNlEkoKDEdldExvYmJ5",
-            "TGlzdBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoiLmdhbWUubG9iYmllcy5H",
-            "ZXRMb2JieUxpc3RSZXNwb25zZRJRCg5TdWJzY3JpYmVMb2JieRIjLmdhbWUu",
-            "bG9iYmllcy5TdWJzY3JpYmVMb2JieVJlcXVlc3QaGC5nYW1lLmxvYmJpZXMu",
-            "TG9iYnlFdmVudDABEnkKGFNldExvYmJ5Q3VzdG9tUHJvcGVydGllcxItLmdh",
-            "bWUubG9iYmllcy5TZXRMb2JieUN1c3RvbVByb3BlcnRpZXNSZXF1ZXN0Gi4u",
-            "Z2FtZS5sb2JiaWVzLlNldExvYmJ5Q3VzdG9tUHJvcGVydGllc1Jlc3BvbnNl",
-            "EosBCh5TZXRVc2VySW5Mb2JieUN1c3RvbVByb3BlcnRpZXMSMy5nYW1lLmxv",
-            "YmJpZXMuU2V0VXNlckluTG9iYnlDdXN0b21Qcm9wZXJ0aWVzUmVxdWVzdBo0",
-            "LmdhbWUubG9iYmllcy5TZXRVc2VySW5Mb2JieUN1c3RvbVByb3BlcnRpZXNS",
-            "ZXNwb25zZWIGcHJvdG8z"));
+            "X2NsaWVudF9pZBgBIAEoBRISCgptYXhfY2xpZW50GAIgASgFIo8BChNDcmVh",
+            "dGVMb2JieVJlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgSKwoKbG9iYnlfaW5m",
+            "bxgCIAEoCzIXLmdhbWUubG9iYmllcy5Mb2JieUluZm8SOgoTdXNlcl9pbl9s",
+            "b2JieV9pbmZvcxgDIAMoCzIdLmdhbWUubG9iYmllcy5Vc2VySW5Mb2JieUlu",
+            "Zm8iNwoQSm9pbkxvYmJ5UmVxdWVzdBIQCghsb2JieV9pZBgBIAEoBRIRCglj",
+            "bGllbnRfaWQYAiABKAUijQEKEUpvaW5Mb2JieVJlc3BvbnNlEg8KB3N1Y2Nl",
+            "c3MYASABKAgSKwoKbG9iYnlfaW5mbxgCIAEoCzIXLmdhbWUubG9iYmllcy5M",
+            "b2JieUluZm8SOgoTdXNlcl9pbl9sb2JieV9pbmZvcxgDIAMoCzIdLmdhbWUu",
+            "bG9iYmllcy5Vc2VySW5Mb2JieUluZm8iOAoRTGVhdmVMb2JieVJlcXVlc3QS",
+            "EAoIbG9iYnlfaWQYASABKAUSEQoJY2xpZW50X2lkGAIgASgFIiUKEkxlYXZl",
+            "TG9iYnlSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIIkQKFEdldExvYmJ5TGlz",
+            "dFJlc3BvbnNlEiwKC2xvYmJ5X2luZm9zGAEgAygLMhcuZ2FtZS5sb2JiaWVz",
+            "LkxvYmJ5SW5mbyI8ChVTdWJzY3JpYmVMb2JieVJlcXVlc3QSEAoIbG9iYnlf",
+            "aWQYASABKAUSEQoJY2xpZW50X2lkGAIgASgFIqEBCh9TZXRMb2JieUN1c3Rv",
+            "bVByb3BlcnRpZXNSZXF1ZXN0EhAKCGxvYmJ5X2lkGAEgASgFEkEKAmt2GAIg",
+            "AygLMjUuZ2FtZS5sb2JiaWVzLlNldExvYmJ5Q3VzdG9tUHJvcGVydGllc1Jl",
+            "cXVlc3QuS3ZFbnRyeRopCgdLdkVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiMwogU2V0TG9iYnlDdXN0b21Qcm9wZXJ0aWVzUmVzcG9u",
+            "c2USDwoHc3VjY2VzcxgBIAEoCCLAAQolU2V0VXNlckluTG9iYnlDdXN0b21Q",
+            "cm9wZXJ0aWVzUmVxdWVzdBIQCghsb2JieV9pZBgBIAEoBRIRCgljbGllbnRf",
+            "aWQYAiABKAUSRwoCa3YYAyADKAsyOy5nYW1lLmxvYmJpZXMuU2V0VXNlcklu",
+            "TG9iYnlDdXN0b21Qcm9wZXJ0aWVzUmVxdWVzdC5LdkVudHJ5GikKB0t2RW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI5CiZTZXRVc2Vy",
+            "SW5Mb2JieUN1c3RvbVByb3BlcnRpZXNSZXNwb25zZRIPCgdzdWNjZXNzGAEg",
+            "ASgIIsICCgpMb2JieUV2ZW50EjAKBHR5cGUYASABKA4yIi5nYW1lLmxvYmJp",
+            "ZXMuTG9iYnlFdmVudC5FdmVudFR5cGUSEAoIbG9iYnlfaWQYAiABKAUSEQoJ",
+            "Y2xpZW50X2lkGAMgASgFEiwKAmt2GAQgAygLMiAuZ2FtZS5sb2JiaWVzLkxv",
+            "YmJ5RXZlbnQuS3ZFbnRyeRImCgJ0cxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXAaKQoHS3ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIlwKCUV2ZW50VHlwZRIPCgtNRU1CRVJfSk9JThAAEg8KC01F",
+            "TUJFUl9MRUZUEAESFgoSTE9CQllfUFJPUF9DSEFOR0VEEAISFQoRVVNFUl9Q",
+            "Uk9QX0NIQU5HRUQQAyLgAQoJTG9iYnlJbmZvEhAKCGxvYmJ5X2lkGAEgASgF",
+            "EhYKDmhvc3RfY2xpZW50X2lkGAIgASgFEhIKCm1heF9jbGllbnQYAyABKAUS",
+            "EgoKbnVtX2NsaWVudBgEIAEoBRJIChFjdXN0b21fcHJvcGVydGllcxgFIAMo",
+            "CzItLmdhbWUubG9iYmllcy5Mb2JieUluZm8uQ3VzdG9tUHJvcGVydGllc0Vu",
+            "dHJ5GjcKFUN1c3RvbVByb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBIq0BCg9Vc2VySW5Mb2JieUluZm8SEQoJY2xpZW50",
+            "X2lkGAEgASgFEk4KEWN1c3RvbV9wcm9wZXJ0aWVzGAIgAygLMjMuZ2FtZS5s",
+            "b2JiaWVzLlVzZXJJbkxvYmJ5SW5mby5DdXN0b21Qcm9wZXJ0aWVzRW50cnka",
+            "NwoVQ3VzdG9tUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEyqwUKDkxvYmJpZXNTZXJ2aWNlElIKC0NyZWF0ZUxvYmJ5",
+            "EiAuZ2FtZS5sb2JiaWVzLkNyZWF0ZUxvYmJ5UmVxdWVzdBohLmdhbWUubG9i",
+            "Ymllcy5DcmVhdGVMb2JieVJlc3BvbnNlEkwKCUpvaW5Mb2JieRIeLmdhbWUu",
+            "bG9iYmllcy5Kb2luTG9iYnlSZXF1ZXN0Gh8uZ2FtZS5sb2JiaWVzLkpvaW5M",
+            "b2JieVJlc3BvbnNlEk8KCkxlYXZlTG9iYnkSHy5nYW1lLmxvYmJpZXMuTGVh",
+            "dmVMb2JieVJlcXVlc3QaIC5nYW1lLmxvYmJpZXMuTGVhdmVMb2JieVJlc3Bv",
+            "bnNlEkoKDEdldExvYmJ5TGlzdBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoi",
+            "LmdhbWUubG9iYmllcy5HZXRMb2JieUxpc3RSZXNwb25zZRJRCg5TdWJzY3Jp",
+            "YmVMb2JieRIjLmdhbWUubG9iYmllcy5TdWJzY3JpYmVMb2JieVJlcXVlc3Qa",
+            "GC5nYW1lLmxvYmJpZXMuTG9iYnlFdmVudDABEnkKGFNldExvYmJ5Q3VzdG9t",
+            "UHJvcGVydGllcxItLmdhbWUubG9iYmllcy5TZXRMb2JieUN1c3RvbVByb3Bl",
+            "cnRpZXNSZXF1ZXN0Gi4uZ2FtZS5sb2JiaWVzLlNldExvYmJ5Q3VzdG9tUHJv",
+            "cGVydGllc1Jlc3BvbnNlEosBCh5TZXRVc2VySW5Mb2JieUN1c3RvbVByb3Bl",
+            "cnRpZXMSMy5nYW1lLmxvYmJpZXMuU2V0VXNlckluTG9iYnlDdXN0b21Qcm9w",
+            "ZXJ0aWVzUmVxdWVzdBo0LmdhbWUubG9iYmllcy5TZXRVc2VySW5Mb2JieUN1",
+            "c3RvbVByb3BlcnRpZXNSZXNwb25zZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Game.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Lobbies.CreateLobbyRequest), global::Game.Lobbies.CreateLobbyRequest.Parser, new[]{ "HostClientId", "MaxClient" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Lobbies.CreateLobbyResponse), global::Game.Lobbies.CreateLobbyResponse.Parser, new[]{ "LobbyId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Lobbies.CreateLobbyResponse), global::Game.Lobbies.CreateLobbyResponse.Parser, new[]{ "Success", "LobbyInfo", "UserInLobbyInfos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Lobbies.JoinLobbyRequest), global::Game.Lobbies.JoinLobbyRequest.Parser, new[]{ "LobbyId", "ClientId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Lobbies.JoinLobbyResponse), global::Game.Lobbies.JoinLobbyResponse.Parser, new[]{ "Success", "LobbyInfo", "UserInLobbyInfos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Lobbies.LeaveLobbyRequest), global::Game.Lobbies.LeaveLobbyRequest.Parser, new[]{ "LobbyId", "ClientId" }, null, null, null, null),
@@ -381,7 +383,9 @@ namespace Game.Lobbies {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateLobbyResponse(CreateLobbyResponse other) : this() {
-      lobbyId_ = other.lobbyId_;
+      success_ = other.success_;
+      lobbyInfo_ = other.lobbyInfo_ != null ? other.lobbyInfo_.Clone() : null;
+      userInLobbyInfos_ = other.userInLobbyInfos_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -391,16 +395,39 @@ namespace Game.Lobbies {
       return new CreateLobbyResponse(this);
     }
 
-    /// <summary>Field number for the "lobby_id" field.</summary>
-    public const int LobbyIdFieldNumber = 1;
-    private int lobbyId_;
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 1;
+    private bool success_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int LobbyId {
-      get { return lobbyId_; }
+    public bool Success {
+      get { return success_; }
       set {
-        lobbyId_ = value;
+        success_ = value;
       }
+    }
+
+    /// <summary>Field number for the "lobby_info" field.</summary>
+    public const int LobbyInfoFieldNumber = 2;
+    private global::Game.Lobbies.LobbyInfo lobbyInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Game.Lobbies.LobbyInfo LobbyInfo {
+      get { return lobbyInfo_; }
+      set {
+        lobbyInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_in_lobby_infos" field.</summary>
+    public const int UserInLobbyInfosFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Game.Lobbies.UserInLobbyInfo> _repeated_userInLobbyInfos_codec
+        = pb::FieldCodec.ForMessage(26, global::Game.Lobbies.UserInLobbyInfo.Parser);
+    private readonly pbc::RepeatedField<global::Game.Lobbies.UserInLobbyInfo> userInLobbyInfos_ = new pbc::RepeatedField<global::Game.Lobbies.UserInLobbyInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Game.Lobbies.UserInLobbyInfo> UserInLobbyInfos {
+      get { return userInLobbyInfos_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -418,7 +445,9 @@ namespace Game.Lobbies {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LobbyId != other.LobbyId) return false;
+      if (Success != other.Success) return false;
+      if (!object.Equals(LobbyInfo, other.LobbyInfo)) return false;
+      if(!userInLobbyInfos_.Equals(other.userInLobbyInfos_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -426,7 +455,9 @@ namespace Game.Lobbies {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LobbyId != 0) hash ^= LobbyId.GetHashCode();
+      if (Success != false) hash ^= Success.GetHashCode();
+      if (lobbyInfo_ != null) hash ^= LobbyInfo.GetHashCode();
+      hash ^= userInLobbyInfos_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -445,10 +476,15 @@ namespace Game.Lobbies {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LobbyId != 0) {
+      if (Success != false) {
         output.WriteRawTag(8);
-        output.WriteInt32(LobbyId);
+        output.WriteBool(Success);
       }
+      if (lobbyInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LobbyInfo);
+      }
+      userInLobbyInfos_.WriteTo(output, _repeated_userInLobbyInfos_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -459,10 +495,15 @@ namespace Game.Lobbies {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LobbyId != 0) {
+      if (Success != false) {
         output.WriteRawTag(8);
-        output.WriteInt32(LobbyId);
+        output.WriteBool(Success);
       }
+      if (lobbyInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LobbyInfo);
+      }
+      userInLobbyInfos_.WriteTo(ref output, _repeated_userInLobbyInfos_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -473,9 +514,13 @@ namespace Game.Lobbies {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LobbyId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LobbyId);
+      if (Success != false) {
+        size += 1 + 1;
       }
+      if (lobbyInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LobbyInfo);
+      }
+      size += userInLobbyInfos_.CalculateSize(_repeated_userInLobbyInfos_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -488,9 +533,16 @@ namespace Game.Lobbies {
       if (other == null) {
         return;
       }
-      if (other.LobbyId != 0) {
-        LobbyId = other.LobbyId;
+      if (other.Success != false) {
+        Success = other.Success;
       }
+      if (other.lobbyInfo_ != null) {
+        if (lobbyInfo_ == null) {
+          LobbyInfo = new global::Game.Lobbies.LobbyInfo();
+        }
+        LobbyInfo.MergeFrom(other.LobbyInfo);
+      }
+      userInLobbyInfos_.Add(other.userInLobbyInfos_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -511,7 +563,18 @@ namespace Game.Lobbies {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            LobbyId = input.ReadInt32();
+            Success = input.ReadBool();
+            break;
+          }
+          case 18: {
+            if (lobbyInfo_ == null) {
+              LobbyInfo = new global::Game.Lobbies.LobbyInfo();
+            }
+            input.ReadMessage(LobbyInfo);
+            break;
+          }
+          case 26: {
+            userInLobbyInfos_.AddEntriesFrom(input, _repeated_userInLobbyInfos_codec);
             break;
           }
         }
@@ -534,7 +597,18 @@ namespace Game.Lobbies {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            LobbyId = input.ReadInt32();
+            Success = input.ReadBool();
+            break;
+          }
+          case 18: {
+            if (lobbyInfo_ == null) {
+              LobbyInfo = new global::Game.Lobbies.LobbyInfo();
+            }
+            input.ReadMessage(LobbyInfo);
+            break;
+          }
+          case 26: {
+            userInLobbyInfos_.AddEntriesFrom(ref input, _repeated_userInLobbyInfos_codec);
             break;
           }
         }
