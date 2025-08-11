@@ -35,7 +35,7 @@ namespace Game.Shared.GameObjects
 #if UNITY_EDITOR
                 EditorApplication.ExitPlaymode();
 #else
-                Application.Quit();
+            Application.Quit();
 #endif
                 return;
             }

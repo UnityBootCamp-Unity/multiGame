@@ -1,4 +1,3 @@
-using Game.Chat;
 using Game.Client.Network;
 using Game.Lobbies;
 using Google.Protobuf.WellKnownTypes;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static Game.Client.LobbiesConstants;
 
 namespace Game.Client.Controllers
@@ -117,7 +117,7 @@ namespace Game.Client.Controllers
                     SetCustomProperty(item.Key, item.Value);
                 }
             }
-
+            
             public void AddClient(int clientId)
             {
                 _userCustomProperties[clientId] = new Dictionary<string, string>();
@@ -156,24 +156,24 @@ namespace Game.Client.Controllers
                 return _customProperties;
             }
 
-            public void SetUserCustomProperty(int clietnId, string key, string value)
+            public void SetUserCustomProperty(int clientId, string key, string value)
             {
-                if (_userCustomProperties.TryGetValue(hostClientId, out var properties) == false)
-                    properties = _userCustomProperties[clietnId] = new Dictionary<string, string>();
+                if (_userCustomProperties.TryGetValue(clientId, out var properties) == false)
+                    properties = _userCustomProperties[clientId] = new Dictionary<string, string>();
 
                 properties[key] = value;
                 MultiplayMatchBlackboard.clientIds = _userCustomProperties.Keys;
             }
 
-            public string GetUserCustomProperty(int clientId, string key)
+            public string GetUserCustomProperty(int clinetId, string key)
             {
-                if (_userCustomProperties.TryGetValue(clientId, out var properties) == false)
+                if (_userCustomProperties.TryGetValue(clinetId, out var properties) == false)
                     return null;
 
-                if (_userCustomProperties[clientId].TryGetValue(key, out var property) == false)
+                if (_userCustomProperties[clinetId].TryGetValue(key, out var property) == false)
                     return null;
 
-                return properties[key];
+                return property;
             }
 
             public IDictionary<string, string> GetUserCustomProperties(int clientId)
@@ -409,7 +409,7 @@ namespace Game.Client.Controllers
                     ClientId = GrpcConnection.clientInfo.ClientId,
                 }, cancellationToken: _cts.Token);
             }
-            
+
             // 주의. Task.Run 실행하면 ThreadPool 에서 다른 쓰레드에 이 작업을 할당한다.
             // 즉, 메인쓰레드가 아니므로 여기서 구독한 내용에 Unity Logic 이나 UI 처리 등이 있으면 메인쓰레드 Context 동기화가 필요하다.
             _ = Task.Run(async () =>

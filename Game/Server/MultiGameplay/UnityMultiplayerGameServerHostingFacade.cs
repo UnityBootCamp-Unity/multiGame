@@ -1,24 +1,20 @@
-﻿using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using System.Data.SqlTypes;
+﻿using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using static Game.Server.MultiGameplay.UnityMultiplayerGameServerHostingConfiguration;
-using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
-using static System.Net.WebRequestMethods;
+
 namespace Game.Server.MultiGameplay
-{ // {BASE_URL} 추가 필요
+{
     static class UnityMultiplayerGameServerHostingFacade
     {
-        private static readonly HttpClient _httpClient;
-        private static  string _accessToken;
+        private static readonly HttpClient _httpClient = new HttpClient();
+        private static string _accessToken;
 
         public record class TokenExchangeRequest(string[] scopes);
         public record class TokenExchangeResponse(string accessToken);
-        public record class GetAllocationsResponse(List<AllocationsResponse> allocations, Pagination pagination);
-
-        public record class AllocationsResponse
+        public record class GetAllocationsResponse(List<AllocationResponse> allocations, Pagination pagination);
+        public record class AllocationResponse
         (
             string allocationId,
             long buildConfigurationId,
@@ -37,7 +33,7 @@ namespace Game.Server.MultiGameplay
             long serverId
         );
 
-        public record class ServerAllocation
+        public record class ServerAllocation 
         (
             string AllocationId,
             long ServerId,
@@ -49,12 +45,11 @@ namespace Game.Server.MultiGameplay
             long MachineId,
             long BuildConfigurationId
         );
-
+        
         public record class CreateRequest(string allocationId, long buildConfigurationId, string payload, string regionId, bool restart);
         public record class CreateResponse(string allocationId, string href);
-        public record class AllocationPayload(int lobbyId, List<int> clientIds, Dictionary<string, string> gameSettiings);
+        public record class AllocationPayload(int lobbyId, List<int> clientIds, Dictionary<string, string> gameSettings);
         public record class DeleteRequest(string allocationId);
-
         public record class Pagination(int limit, int offset);
 
         private static async Task<string> GetAccessTokenAsync()
@@ -108,13 +103,14 @@ namespace Game.Server.MultiGameplay
 
         private static async Task<HttpRequestMessage> CreateAuthenticatedRequest<T>(HttpMethod method, string endPoint, T body)
         {
-            var request = await CreateAuthenticatedRequest(method, endPoint);
+            var reqeust = await CreateAuthenticatedRequest(method, endPoint);
             string jsonString = JsonConvert.SerializeObject(body);
-            request.Content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            return request;
+            reqeust.Content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+            return reqeust;
         }
 
-        public static async Task<List<ServerAllocation>> GetAllocationsAsync(string age = null, int? limit = null, int? offset = null, IEnumerable<string> ids = null)
+        public static async Task<List<ServerAllocation>> GetAllocationsAsync(string age = null, int? limit = null, int? offset = null, IEnumerable<string>? ids = null)
         {
             var queryParams = new List<string>();
 
@@ -163,6 +159,7 @@ namespace Game.Server.MultiGameplay
                     BuildConfigurationId: allocation.buildConfigurationId
                 ));
             }
+
             return serverAllocations;
         }
 
@@ -174,9 +171,9 @@ namespace Game.Server.MultiGameplay
 
             response.EnsureSuccessStatusCode();
 
-            var responseDto = await response.Content.ReadFromJsonAsync<AllocationsResponse>();
+            var responseDto = await response.Content.ReadFromJsonAsync<AllocationResponse>();
 
-            return (new ServerAllocation
+            return new ServerAllocation
                 (
                     AllocationId: responseDto.allocationId,
                     ServerId: responseDto.serverId,
@@ -187,7 +184,7 @@ namespace Game.Server.MultiGameplay
                     IsReady: responseDto.ready < DateTime.UtcNow,
                     MachineId: responseDto.machineId,
                     BuildConfigurationId: responseDto.buildConfigurationId
-                ));
+                );
         }
 
         public static async Task<(string allocationId, string href)> CreateAllocationAsync(string allocationId,
@@ -214,7 +211,7 @@ namespace Game.Server.MultiGameplay
             response.EnsureSuccessStatusCode();
 
             var responseDto = await response.Content.ReadFromJsonAsync<CreateResponse>();
-            return (responseDto.allocationId, responseDto.href );
+            return (responseDto.allocationId, responseDto.href);
         }
 
         /// <summary>
@@ -227,6 +224,7 @@ namespace Game.Server.MultiGameplay
                 (
                     allocationId: allocationId
                 ));
+
             var response = await _httpClient.SendAsync(request);
 
             response.EnsureSuccessStatusCode();

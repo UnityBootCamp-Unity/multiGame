@@ -1,3 +1,4 @@
+using Assets.Scripts.Utils;
 using Game.Singletons;
 using System;
 using System.Collections;
@@ -13,8 +14,9 @@ namespace Game
         LoggedIn,
         WaitUntilLobbiesSceneLoaded,
         InLobbies,
+        StartupGamePlay,
         WaitForGamePlay,
-        InGamePlay
+        InGamePlay,
     }
 
 
@@ -47,6 +49,12 @@ namespace Game
                 case State.WaitUntilLobbiesSceneLoaded:
                     break;
                 case State.InLobbies:
+                    break;
+                case State.StartupGamePlay:
+                    {
+                        ChangeState(State.WaitForGamePlay);
+                        StartCoroutine(SceneTransitionUtility.C_LoadAndSwitchAsync("InGame", null, null, () => ChangeState(State.InGamePlay)));
+                    }
                     break;
                 case State.WaitForGamePlay:
                     break;

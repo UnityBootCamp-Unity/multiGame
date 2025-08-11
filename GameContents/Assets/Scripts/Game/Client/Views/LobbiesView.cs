@@ -1,4 +1,5 @@
-﻿using Game.Client.Controllers;
+﻿using Assets.Scripts.Utils;
+using Game.Client.Controllers;
 using Game.Client.Network;
 using Game.Lobbies;
 using System.Collections.Generic;
@@ -289,7 +290,8 @@ namespace Game.Client.Views
                 _inLobbyReadyCancel.gameObject.SetActive(true);
                 _inLobbyReadyCancel.interactable = true;
             }
-            _inLobbyReady.interactable = true; // Ready 실패하면 다시 Ready 요청할수있게 Ready 버튼 누를수있게
+
+            _inLobbyReady.interactable = true;
         }
 
         /// <summary>
@@ -335,7 +337,7 @@ namespace Game.Client.Views
             _alertMessage.text = "Leave lobby...";
             _alert.Show();
             var (success, message) = await _controller.LeaveLobbyAsync();
-
+            
             if (success)
             {
                 _inLobby.Hide();
@@ -350,7 +352,6 @@ namespace Game.Client.Views
                 await Task.Delay(2000);
                 _alert.Hide();
             }
-           
         }
 
         private async void OnInLobbyPlayButtonClicked()
@@ -364,8 +365,8 @@ namespace Game.Client.Views
 
             if (success)
             {
-                await Task.Delay(1000);
-                SceneManager.LoadScene("InGame");
+                MultiplayMatchBlackboard.isMaster = true;
+                // Nothing to do... 서버 할당되어서 이벤트처리될때까지 그냥 기다림.
             }
             else
             {
@@ -384,10 +385,10 @@ namespace Game.Client.Views
         private async void OnMemberJoin(int clientId)
         {
             // Unity 의 Awaitable 은
-            // C#의 SynchronizationContext 를 기반으로 한 MainThread /Send/Post 등의 동기화를 할수있는 함수들을 제공하는 클래스.
-            // SynchronizationContext 에서 Send 랑 Post 가 뭐가 다름?
-            // Send (Awaitable.MainThreadAsync) 는 : 동기화해야하는 쓰레드컨텍스트랑 현재실행 쓰레드가 같으면 그냥 동기실행, 다르면 메인쓰레드 실행 Queue 등록
-            // Post (Awaitable.NextFrameAsync) 는 : 그냥 메인쓰레드 실행 Queue 등록
+            // C# 의 SynchronizationContext 를 기반으로한 MainThread Send/Post 등의 동기화를 할수있는 함수들을 제공하는 클래스.
+            // SynchronizationContext 에서 Send 랑 Post 가 뭐가다름 ? 
+            // Send (Awaitable.MainThreadAsync) 는 : 동기화해야하는 쓰레드컨텍스트랑 현재실행 쓰레드가 같으면 동기실행, 다르면 동기화해야하는 실행 Queue 등록
+            // Post (Awaitable.NextFrameAsync) 는 : 그냥 동기화해야하는 쓰레드컨텍스트 실행 Queue 등록
             await Awaitable.MainThreadAsync(); // 이거 이해 잘 안되면 AI 한테, 이 함수 Awaitable 쓰지말고 SynchronizationContext 기반으로 다시 짜달라고 하삼.
 
             Debug.Log("OnMemberJoin");
@@ -464,7 +465,7 @@ namespace Game.Client.Views
             {
                 _inLobbyPlay.gameObject.SetActive(false);
                 bool isReady = false;
-                
+
                 if (_controller.myUsercustomProperties.TryGetValue(IS_READY, out string isReadyString))
                     isReady = bool.Parse(isReadyString);
 
@@ -485,7 +486,7 @@ namespace Game.Client.Views
             else if (lobbyState == FINISHED_ALL_READY_TO_PLAY_GAME)
             {
                 _gameStarting.Show();
-                GameManager.instance.ChangeState(State.WaitForGamePlay);
+                GameManager.instance.ChangeState(State.StartupGamePlay);
             }
 
             _lobbyState = lobbyState;
@@ -523,7 +524,7 @@ namespace Game.Client.Views
 
                 // 유저데이터에 IsReady가 없었으면 아직 동기화안된 애가 있다.
                 if (propertyExist == false)
-                {
+                { 
                     isAllReady = false;
                     break;
                 }
@@ -534,5 +535,6 @@ namespace Game.Client.Views
 
             _inLobbyPlay.interactable = isAllReady;
         }
+
     }
 }

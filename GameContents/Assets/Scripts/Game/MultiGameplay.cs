@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Game.MultiGamePlay {
+namespace Game.Multigameplay.V1 {
 
   /// <summary>Holder for reflection information generated from multi_gameplay.proto</summary>
   public static partial class MultiGameplayReflection {
@@ -24,61 +24,79 @@ namespace Game.MultiGamePlay {
     static MultiGameplayReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRtdWx0aV9nYW1lcGxheS5wcm90bxISZ2FtZS5tdWx0aUdhbWVQbGF5Ggxj",
-            "b21tb24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKFAQoXQ3JlYXRlQWxsb2Nh",
-            "dGlvblJlcXVlc3QSFQoNYWxsb2NhdGlvbl9pZBgBIAEoCRIeChZidWlsZF9j",
-            "b25maWd1cmF0aW9uX2lkGAIgASgDEg8KB3BheWxvYWQYAyABKAkSEQoJcmVn",
-            "aW9uX2lkGAQgASgJEg8KB3Jlc3RhcnQYBSABKAgiYAoYQ3JlYXRlQWxsb2Nh",
-            "dGlvblJlc3BvbnNlEjYKCmFsbG9jYXRpb24YASABKAsyIi5nYW1lLm11bHRp",
-            "R2FtZVBsYXkuQWxsb2NhdGlvbkluZm8SDAoEaHJlZhgCIAEoCSIwChdEZWxl",
-            "dGVBbGxvY2F0aW9uUmVxdWVzdBIVCg1hbGxvY2F0aW9uX2lkGAEgASgJIlsK",
-            "FUdldEFsbG9jYXRpb25zUmVxdWVzdBILCgNhZ2UYASABKAkSDQoFbGltaXQY",
-            "AiABKAUSDgoGb2Zmc2V0GAMgASgFEhYKDmFsbG9jYXRpb25faWRzGAQgAygJ",
-            "IokBChZHZXRBbGxvY2F0aW9uc1Jlc3BvbnNlEjcKC2FsbG9jYXRpb25zGAEg",
-            "AygLMiIuZ2FtZS5tdWx0aUdhbWVQbGF5LkFsbG9jYXRpb25JbmZvEjYKCnBh",
-            "Z2luYXRpb24YAiABKAsyIi5nYW1lLm11bHRpR2FtZVBsYXkuUGFnaW5hdGlv",
-            "bkluZm8iLQoUR2V0QWxsb2NhdGlvblJlcXVlc3QSFQoNYWxsb2NhdGlvbl9p",
-            "ZBgBIAEoCSJPChVHZXRBbGxvY2F0aW9uUmVzcG9uc2USNgoKYWxsb2NhdGlv",
-            "bhgBIAEoCzIiLmdhbWUubXVsdGlHYW1lUGxheS5BbGxvY2F0aW9uSW5mbyLM",
-            "AQoOQWxsb2NhdGlvbkluZm8SFQoNYWxsb2NhdGlvbl9pZBgBIAEoCRIeChZi",
-            "dWlsZF9jb25maWd1cmF0aW9uX2lkGAIgASgDEhAKCGZsZWV0X2lkGAMgASgJ",
-            "EhEKCWdhbWVfcG9ydBgEIAEoBBISCgppcF9hZGRyZXNzGAUgASgJEhIKCm1h",
-            "Y2hpbmVfaWQYBiABKAMSEAoIaXNfcmVhZHkYByABKAgSEQoJcmVnaW9uX2lk",
-            "GAggASgJEhEKCXNlcnZlcl9pZBgJIAEoAyIvCg5QYWdpbmF0aW9uSW5mbxIN",
-            "CgVsaW1pdBgBIAEoBRIOCgZvZmZzZXQYAiABKAUiewobVXBkYXRlR2FtZXBs",
-            "YXlTdGF0dXNSZXF1ZXN0EhUKDWFsbG9jYXRpb25faWQYASABKAkSEQoJc2Vy",
-            "dmVyX2lkGAIgASgDEjIKBnN0YXR1cxgDIAEoDjIiLmdhbWUubXVsdGlHYW1l",
-            "UGxheS5HYW1lcGxheVN0YXR1cyrFAQoOR2FtZXBsYXlTdGF0dXMSHAoYR0FN",
-            "RV9QTEFZX1NUQVRVU19VTktOT1dOEAASHQoZR0FNRV9QTEFZX1NUQVRVU19T",
-            "VEFSVElORxABEhoKFkdBTUVfUExBWV9TVEFUVVNfUkVBRFkQAhIcChhHQU1F",
-            "X1BMQVlfU1RBVFVTX0lOX0dBTUUQAxIbChdHQU1FX1BMQVlfU1RBVFVTX0VO",
-            "RElORxAEEh8KG0dBTUVfUExBWV9TVEFUVVNfVEVSTUlOQVRFRBAFMo4EChRN",
-            "dWx0aUdhbWVQbGF5U2VydmljZRJtChBDcmVhdGVBbGxvY2F0aW9uEisuZ2Ft",
-            "ZS5tdWx0aUdhbWVQbGF5LkNyZWF0ZUFsbG9jYXRpb25SZXF1ZXN0GiwuZ2Ft",
-            "ZS5tdWx0aUdhbWVQbGF5LkNyZWF0ZUFsbG9jYXRpb25SZXNwb25zZRJXChBE",
-            "ZWxldGVBbGxvY2F0aW9uEisuZ2FtZS5tdWx0aUdhbWVQbGF5LkRlbGV0ZUFs",
-            "bG9jYXRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmcKDkdl",
-            "dEFsbG9jYXRpb25zEikuZ2FtZS5tdWx0aUdhbWVQbGF5LkdldEFsbG9jYXRp",
-            "b25zUmVxdWVzdBoqLmdhbWUubXVsdGlHYW1lUGxheS5HZXRBbGxvY2F0aW9u",
-            "c1Jlc3BvbnNlEmQKDUdldEFsbG9jYXRpb24SKC5nYW1lLm11bHRpR2FtZVBs",
-            "YXkuR2V0QWxsb2NhdGlvblJlcXVlc3QaKS5nYW1lLm11bHRpR2FtZVBsYXku",
-            "R2V0QWxsb2NhdGlvblJlc3BvbnNlEl8KFFVwZGF0ZUdhbWVwbGF5U3RhdHVz",
-            "Ei8uZ2FtZS5tdWx0aUdhbWVQbGF5LlVwZGF0ZUdhbWVwbGF5U3RhdHVzUmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eWIGcHJvdG8z"));
+            "ChRtdWx0aV9nYW1lcGxheS5wcm90bxIVZ2FtZS5tdWx0aWdhbWVwbGF5LnYx",
+            "Ggxjb21tb24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKFAQoXQ3JlYXRlQWxs",
+            "b2NhdGlvblJlcXVlc3QSFQoNYWxsb2NhdGlvbl9pZBgBIAEoCRIeChZidWls",
+            "ZF9jb25maWd1cmF0aW9uX2lkGAIgASgDEg8KB3BheWxvYWQYAyABKAkSEQoJ",
+            "cmVnaW9uX2lkGAQgASgJEg8KB3Jlc3RhcnQYBSABKAgiYwoYQ3JlYXRlQWxs",
+            "b2NhdGlvblJlc3BvbnNlEjkKCmFsbG9jYXRpb24YASABKAsyJS5nYW1lLm11",
+            "bHRpZ2FtZXBsYXkudjEuQWxsb2NhdGlvbkluZm8SDAoEaHJlZhgCIAEoCSIw",
+            "ChdEZWxldGVBbGxvY2F0aW9uUmVxdWVzdBIVCg1hbGxvY2F0aW9uX2lkGAEg",
+            "ASgJIlsKFUdldEFsbG9jYXRpb25zUmVxdWVzdBILCgNhZ2UYASABKAkSDQoF",
+            "bGltaXQYAiABKAUSDgoGb2Zmc2V0GAMgASgFEhYKDmFsbG9jYXRpb25faWRz",
+            "GAQgAygJIo8BChZHZXRBbGxvY2F0aW9uc1Jlc3BvbnNlEjoKC2FsbG9jYXRp",
+            "b25zGAEgAygLMiUuZ2FtZS5tdWx0aWdhbWVwbGF5LnYxLkFsbG9jYXRpb25J",
+            "bmZvEjkKCnBhZ2luYXRpb24YAiABKAsyJS5nYW1lLm11bHRpZ2FtZXBsYXku",
+            "djEuUGFnaW5hdGlvbkluZm8iLQoUR2V0QWxsb2NhdGlvblJlcXVlc3QSFQoN",
+            "YWxsb2NhdGlvbl9pZBgBIAEoCSJSChVHZXRBbGxvY2F0aW9uUmVzcG9uc2US",
+            "OQoKYWxsb2NhdGlvbhgBIAEoCzIlLmdhbWUubXVsdGlnYW1lcGxheS52MS5B",
+            "bGxvY2F0aW9uSW5mbyLMAQoOQWxsb2NhdGlvbkluZm8SFQoNYWxsb2NhdGlv",
+            "bl9pZBgBIAEoCRIeChZidWlsZF9jb25maWd1cmF0aW9uX2lkGAIgASgDEhAK",
+            "CGZsZWV0X2lkGAMgASgJEhEKCWdhbWVfcG9ydBgEIAEoBBISCgppcF9hZGRy",
+            "ZXNzGAUgASgJEhIKCm1hY2hpbmVfaWQYBiABKAMSEAoIaXNfcmVhZHkYByAB",
+            "KAgSEQoJcmVnaW9uX2lkGAggASgJEhEKCXNlcnZlcl9pZBgJIAEoAyIvCg5Q",
+            "YWdpbmF0aW9uSW5mbxINCgVsaW1pdBgBIAEoBRIOCgZvZmZzZXQYAiABKAUi",
+            "fQobVXBkYXRlR2FtZXBsYXlTdGF0dXNSZXF1ZXN0EhUKDWFsbG9jYXRpb25f",
+            "aWQYASABKAkSEAoIbG9iYnlfaWQYAiABKAUSNQoGc3RhdHVzGAMgASgOMiUu",
+            "Z2FtZS5tdWx0aWdhbWVwbGF5LnYxLkdhbWVwbGF5U3RhdHVzIkcKIFN1YnNj",
+            "cmliZUFsbG9jYXRpb25FdmVudHNSZXF1ZXN0EhAKCGxvYmJ5X2lkGAEgASgF",
+            "EhEKCWNsaWVudF9pZBgCIAEoBSLAAwoPQWxsb2NhdGlvbkV2ZW50Ej4KBHR5",
+            "cGUYASABKA4yMC5nYW1lLm11bHRpZ2FtZXBsYXkudjEuQWxsb2NhdGlvbkV2",
+            "ZW50LkV2ZW50VHlwZRIVCg1hbGxvY2F0aW9uX2lkGAIgASgJEhAKCGxvYmJ5",
+            "X2lkGAMgASgFEi0KCXRpbWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASOQoKYWxsb2NhdGlvbhgFIAEoCzIlLmdhbWUubXVsdGln",
+            "YW1lcGxheS52MS5BbGxvY2F0aW9uSW5mbxI5CgpuZXdfc3RhdHVzGAYgASgO",
+            "MiUuZ2FtZS5tdWx0aWdhbWVwbGF5LnYxLkdhbWVwbGF5U3RhdHVzEhUKDWVy",
+            "cm9yX21lc3NhZ2UYByABKAkihwEKCUV2ZW50VHlwZRIWChJBTExPQ0FUSU9O",
+            "X0NSRUFURUQQABIUChBBTExPQ0FUSU9OX1JFQURZEAESFgoSQUxMT0NBVElP",
+            "Tl9ERUxFVEVEEAISFQoRQUxMT0NBVElPTl9GQUlMRUQQAxIdChlBTExPQ0FU",
+            "SU9OX1NUQVRVU19DSEFOR0VEEAQqxQEKDkdhbWVwbGF5U3RhdHVzEhwKGEdB",
+            "TUVfUExBWV9TVEFUVVNfVU5LTk9XThAAEh0KGUdBTUVfUExBWV9TVEFUVVNf",
+            "U1RBUlRJTkcQARIaChZHQU1FX1BMQVlfU1RBVFVTX1JFQURZEAISHAoYR0FN",
+            "RV9QTEFZX1NUQVRVU19JTl9HQU1FEAMSGwoXR0FNRV9QTEFZX1NUQVRVU19F",
+            "TkRJTkcQBBIfChtHQU1FX1BMQVlfU1RBVFVTX1RFUk1JTkFURUQQBTKmBQoU",
+            "TXVsdGlHYW1lUGxheVNlcnZpY2UScwoQQ3JlYXRlQWxsb2NhdGlvbhIuLmdh",
+            "bWUubXVsdGlnYW1lcGxheS52MS5DcmVhdGVBbGxvY2F0aW9uUmVxdWVzdBov",
+            "LmdhbWUubXVsdGlnYW1lcGxheS52MS5DcmVhdGVBbGxvY2F0aW9uUmVzcG9u",
+            "c2USWgoQRGVsZXRlQWxsb2NhdGlvbhIuLmdhbWUubXVsdGlnYW1lcGxheS52",
+            "MS5EZWxldGVBbGxvY2F0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eRJtCg5HZXRBbGxvY2F0aW9ucxIsLmdhbWUubXVsdGlnYW1lcGxheS52",
+            "MS5HZXRBbGxvY2F0aW9uc1JlcXVlc3QaLS5nYW1lLm11bHRpZ2FtZXBsYXku",
+            "djEuR2V0QWxsb2NhdGlvbnNSZXNwb25zZRJqCg1HZXRBbGxvY2F0aW9uEisu",
+            "Z2FtZS5tdWx0aWdhbWVwbGF5LnYxLkdldEFsbG9jYXRpb25SZXF1ZXN0Giwu",
+            "Z2FtZS5tdWx0aWdhbWVwbGF5LnYxLkdldEFsbG9jYXRpb25SZXNwb25zZRJi",
+            "ChRVcGRhdGVHYW1lcGxheVN0YXR1cxIyLmdhbWUubXVsdGlnYW1lcGxheS52",
+            "MS5VcGRhdGVHYW1lcGxheVN0YXR1c1JlcXVlc3QaFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkSfgoZU3Vic2NyaWJlQWxsb2NhdGlvbkV2ZW50cxI3LmdhbWUu",
+            "bXVsdGlnYW1lcGxheS52MS5TdWJzY3JpYmVBbGxvY2F0aW9uRXZlbnRzUmVx",
+            "dWVzdBomLmdhbWUubXVsdGlnYW1lcGxheS52MS5BbGxvY2F0aW9uRXZlbnQw",
+            "AWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Game.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Game.MultiGamePlay.GameplayStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.CreateAllocationRequest), global::Game.MultiGamePlay.CreateAllocationRequest.Parser, new[]{ "AllocationId", "BuildConfigurationId", "Payload", "RegionId", "Restart" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.CreateAllocationResponse), global::Game.MultiGamePlay.CreateAllocationResponse.Parser, new[]{ "Allocation", "Href" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.DeleteAllocationRequest), global::Game.MultiGamePlay.DeleteAllocationRequest.Parser, new[]{ "AllocationId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.GetAllocationsRequest), global::Game.MultiGamePlay.GetAllocationsRequest.Parser, new[]{ "Age", "Limit", "Offset", "AllocationIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.GetAllocationsResponse), global::Game.MultiGamePlay.GetAllocationsResponse.Parser, new[]{ "Allocations", "Pagination" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.GetAllocationRequest), global::Game.MultiGamePlay.GetAllocationRequest.Parser, new[]{ "AllocationId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.GetAllocationResponse), global::Game.MultiGamePlay.GetAllocationResponse.Parser, new[]{ "Allocation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.AllocationInfo), global::Game.MultiGamePlay.AllocationInfo.Parser, new[]{ "AllocationId", "BuildConfigurationId", "FleetId", "GamePort", "IpAddress", "MachineId", "IsReady", "RegionId", "ServerId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.PaginationInfo), global::Game.MultiGamePlay.PaginationInfo.Parser, new[]{ "Limit", "Offset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.MultiGamePlay.UpdateGameplayStatusRequest), global::Game.MultiGamePlay.UpdateGameplayStatusRequest.Parser, new[]{ "AllocationId", "ServerId", "Status" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Game.Multigameplay.V1.GameplayStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.CreateAllocationRequest), global::Game.Multigameplay.V1.CreateAllocationRequest.Parser, new[]{ "AllocationId", "BuildConfigurationId", "Payload", "RegionId", "Restart" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.CreateAllocationResponse), global::Game.Multigameplay.V1.CreateAllocationResponse.Parser, new[]{ "Allocation", "Href" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.DeleteAllocationRequest), global::Game.Multigameplay.V1.DeleteAllocationRequest.Parser, new[]{ "AllocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.GetAllocationsRequest), global::Game.Multigameplay.V1.GetAllocationsRequest.Parser, new[]{ "Age", "Limit", "Offset", "AllocationIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.GetAllocationsResponse), global::Game.Multigameplay.V1.GetAllocationsResponse.Parser, new[]{ "Allocations", "Pagination" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.GetAllocationRequest), global::Game.Multigameplay.V1.GetAllocationRequest.Parser, new[]{ "AllocationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.GetAllocationResponse), global::Game.Multigameplay.V1.GetAllocationResponse.Parser, new[]{ "Allocation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.AllocationInfo), global::Game.Multigameplay.V1.AllocationInfo.Parser, new[]{ "AllocationId", "BuildConfigurationId", "FleetId", "GamePort", "IpAddress", "MachineId", "IsReady", "RegionId", "ServerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.PaginationInfo), global::Game.Multigameplay.V1.PaginationInfo.Parser, new[]{ "Limit", "Offset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.UpdateGameplayStatusRequest), global::Game.Multigameplay.V1.UpdateGameplayStatusRequest.Parser, new[]{ "AllocationId", "LobbyId", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest), global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest.Parser, new[]{ "LobbyId", "ClientId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.Multigameplay.V1.AllocationEvent), global::Game.Multigameplay.V1.AllocationEvent.Parser, new[]{ "Type", "AllocationId", "LobbyId", "Timestamp", "Allocation", "NewStatus", "ErrorMessage" }, null, new[]{ typeof(global::Game.Multigameplay.V1.AllocationEvent.Types.EventType) }, null, null)
           }));
     }
     #endregion
@@ -112,7 +130,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -458,7 +476,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -491,10 +509,10 @@ namespace Game.MultiGamePlay {
 
     /// <summary>Field number for the "allocation" field.</summary>
     public const int AllocationFieldNumber = 1;
-    private global::Game.MultiGamePlay.AllocationInfo allocation_;
+    private global::Game.Multigameplay.V1.AllocationInfo allocation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Game.MultiGamePlay.AllocationInfo Allocation {
+    public global::Game.Multigameplay.V1.AllocationInfo Allocation {
       get { return allocation_; }
       set {
         allocation_ = value;
@@ -613,7 +631,7 @@ namespace Game.MultiGamePlay {
       }
       if (other.allocation_ != null) {
         if (allocation_ == null) {
-          Allocation = new global::Game.MultiGamePlay.AllocationInfo();
+          Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
         }
         Allocation.MergeFrom(other.Allocation);
       }
@@ -641,7 +659,7 @@ namespace Game.MultiGamePlay {
             break;
           case 10: {
             if (allocation_ == null) {
-              Allocation = new global::Game.MultiGamePlay.AllocationInfo();
+              Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
             }
             input.ReadMessage(Allocation);
             break;
@@ -671,7 +689,7 @@ namespace Game.MultiGamePlay {
             break;
           case 10: {
             if (allocation_ == null) {
-              Allocation = new global::Game.MultiGamePlay.AllocationInfo();
+              Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
             }
             input.ReadMessage(Allocation);
             break;
@@ -702,7 +720,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -900,7 +918,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1207,7 +1225,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1240,21 +1258,21 @@ namespace Game.MultiGamePlay {
 
     /// <summary>Field number for the "allocations" field.</summary>
     public const int AllocationsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Game.MultiGamePlay.AllocationInfo> _repeated_allocations_codec
-        = pb::FieldCodec.ForMessage(10, global::Game.MultiGamePlay.AllocationInfo.Parser);
-    private readonly pbc::RepeatedField<global::Game.MultiGamePlay.AllocationInfo> allocations_ = new pbc::RepeatedField<global::Game.MultiGamePlay.AllocationInfo>();
+    private static readonly pb::FieldCodec<global::Game.Multigameplay.V1.AllocationInfo> _repeated_allocations_codec
+        = pb::FieldCodec.ForMessage(10, global::Game.Multigameplay.V1.AllocationInfo.Parser);
+    private readonly pbc::RepeatedField<global::Game.Multigameplay.V1.AllocationInfo> allocations_ = new pbc::RepeatedField<global::Game.Multigameplay.V1.AllocationInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Game.MultiGamePlay.AllocationInfo> Allocations {
+    public pbc::RepeatedField<global::Game.Multigameplay.V1.AllocationInfo> Allocations {
       get { return allocations_; }
     }
 
     /// <summary>Field number for the "pagination" field.</summary>
     public const int PaginationFieldNumber = 2;
-    private global::Game.MultiGamePlay.PaginationInfo pagination_;
+    private global::Game.Multigameplay.V1.PaginationInfo pagination_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Game.MultiGamePlay.PaginationInfo Pagination {
+    public global::Game.Multigameplay.V1.PaginationInfo Pagination {
       get { return pagination_; }
       set {
         pagination_ = value;
@@ -1354,7 +1372,7 @@ namespace Game.MultiGamePlay {
       allocations_.Add(other.allocations_);
       if (other.pagination_ != null) {
         if (pagination_ == null) {
-          Pagination = new global::Game.MultiGamePlay.PaginationInfo();
+          Pagination = new global::Game.Multigameplay.V1.PaginationInfo();
         }
         Pagination.MergeFrom(other.Pagination);
       }
@@ -1383,7 +1401,7 @@ namespace Game.MultiGamePlay {
           }
           case 18: {
             if (pagination_ == null) {
-              Pagination = new global::Game.MultiGamePlay.PaginationInfo();
+              Pagination = new global::Game.Multigameplay.V1.PaginationInfo();
             }
             input.ReadMessage(Pagination);
             break;
@@ -1413,7 +1431,7 @@ namespace Game.MultiGamePlay {
           }
           case 18: {
             if (pagination_ == null) {
-              Pagination = new global::Game.MultiGamePlay.PaginationInfo();
+              Pagination = new global::Game.Multigameplay.V1.PaginationInfo();
             }
             input.ReadMessage(Pagination);
             break;
@@ -1440,7 +1458,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1638,7 +1656,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1670,10 +1688,10 @@ namespace Game.MultiGamePlay {
 
     /// <summary>Field number for the "allocation" field.</summary>
     public const int AllocationFieldNumber = 1;
-    private global::Game.MultiGamePlay.AllocationInfo allocation_;
+    private global::Game.Multigameplay.V1.AllocationInfo allocation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Game.MultiGamePlay.AllocationInfo Allocation {
+    public global::Game.Multigameplay.V1.AllocationInfo Allocation {
       get { return allocation_; }
       set {
         allocation_ = value;
@@ -1767,7 +1785,7 @@ namespace Game.MultiGamePlay {
       }
       if (other.allocation_ != null) {
         if (allocation_ == null) {
-          Allocation = new global::Game.MultiGamePlay.AllocationInfo();
+          Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
         }
         Allocation.MergeFrom(other.Allocation);
       }
@@ -1792,7 +1810,7 @@ namespace Game.MultiGamePlay {
             break;
           case 10: {
             if (allocation_ == null) {
-              Allocation = new global::Game.MultiGamePlay.AllocationInfo();
+              Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
             }
             input.ReadMessage(Allocation);
             break;
@@ -1818,7 +1836,7 @@ namespace Game.MultiGamePlay {
             break;
           case 10: {
             if (allocation_ == null) {
-              Allocation = new global::Game.MultiGamePlay.AllocationInfo();
+              Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
             }
             input.ReadMessage(Allocation);
             break;
@@ -1845,7 +1863,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2339,7 +2357,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2574,7 +2592,7 @@ namespace Game.MultiGamePlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2595,7 +2613,7 @@ namespace Game.MultiGamePlay {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameplayStatusRequest(UpdateGameplayStatusRequest other) : this() {
       allocationId_ = other.allocationId_;
-      serverId_ = other.serverId_;
+      lobbyId_ = other.lobbyId_;
       status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2618,24 +2636,24 @@ namespace Game.MultiGamePlay {
       }
     }
 
-    /// <summary>Field number for the "server_id" field.</summary>
-    public const int ServerIdFieldNumber = 2;
-    private long serverId_;
+    /// <summary>Field number for the "lobby_id" field.</summary>
+    public const int LobbyIdFieldNumber = 2;
+    private int lobbyId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ServerId {
-      get { return serverId_; }
+    public int LobbyId {
+      get { return lobbyId_; }
       set {
-        serverId_ = value;
+        lobbyId_ = value;
       }
     }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 3;
-    private global::Game.MultiGamePlay.GameplayStatus status_ = global::Game.MultiGamePlay.GameplayStatus.Unknown;
+    private global::Game.Multigameplay.V1.GameplayStatus status_ = global::Game.Multigameplay.V1.GameplayStatus.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Game.MultiGamePlay.GameplayStatus Status {
+    public global::Game.Multigameplay.V1.GameplayStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -2658,7 +2676,7 @@ namespace Game.MultiGamePlay {
         return true;
       }
       if (AllocationId != other.AllocationId) return false;
-      if (ServerId != other.ServerId) return false;
+      if (LobbyId != other.LobbyId) return false;
       if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2668,8 +2686,8 @@ namespace Game.MultiGamePlay {
     public override int GetHashCode() {
       int hash = 1;
       if (AllocationId.Length != 0) hash ^= AllocationId.GetHashCode();
-      if (ServerId != 0L) hash ^= ServerId.GetHashCode();
-      if (Status != global::Game.MultiGamePlay.GameplayStatus.Unknown) hash ^= Status.GetHashCode();
+      if (LobbyId != 0) hash ^= LobbyId.GetHashCode();
+      if (Status != global::Game.Multigameplay.V1.GameplayStatus.Unknown) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2692,11 +2710,11 @@ namespace Game.MultiGamePlay {
         output.WriteRawTag(10);
         output.WriteString(AllocationId);
       }
-      if (ServerId != 0L) {
+      if (LobbyId != 0) {
         output.WriteRawTag(16);
-        output.WriteInt64(ServerId);
+        output.WriteInt32(LobbyId);
       }
-      if (Status != global::Game.MultiGamePlay.GameplayStatus.Unknown) {
+      if (Status != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
@@ -2714,11 +2732,11 @@ namespace Game.MultiGamePlay {
         output.WriteRawTag(10);
         output.WriteString(AllocationId);
       }
-      if (ServerId != 0L) {
+      if (LobbyId != 0) {
         output.WriteRawTag(16);
-        output.WriteInt64(ServerId);
+        output.WriteInt32(LobbyId);
       }
-      if (Status != global::Game.MultiGamePlay.GameplayStatus.Unknown) {
+      if (Status != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
@@ -2735,10 +2753,10 @@ namespace Game.MultiGamePlay {
       if (AllocationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AllocationId);
       }
-      if (ServerId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ServerId);
+      if (LobbyId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LobbyId);
       }
-      if (Status != global::Game.MultiGamePlay.GameplayStatus.Unknown) {
+      if (Status != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -2756,10 +2774,10 @@ namespace Game.MultiGamePlay {
       if (other.AllocationId.Length != 0) {
         AllocationId = other.AllocationId;
       }
-      if (other.ServerId != 0L) {
-        ServerId = other.ServerId;
+      if (other.LobbyId != 0) {
+        LobbyId = other.LobbyId;
       }
-      if (other.Status != global::Game.MultiGamePlay.GameplayStatus.Unknown) {
+      if (other.Status != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2786,11 +2804,11 @@ namespace Game.MultiGamePlay {
             break;
           }
           case 16: {
-            ServerId = input.ReadInt64();
+            LobbyId = input.ReadInt32();
             break;
           }
           case 24: {
-            Status = (global::Game.MultiGamePlay.GameplayStatus) input.ReadEnum();
+            Status = (global::Game.Multigameplay.V1.GameplayStatus) input.ReadEnum();
             break;
           }
         }
@@ -2817,17 +2835,715 @@ namespace Game.MultiGamePlay {
             break;
           }
           case 16: {
-            ServerId = input.ReadInt64();
+            LobbyId = input.ReadInt32();
             break;
           }
           case 24: {
-            Status = (global::Game.MultiGamePlay.GameplayStatus) input.ReadEnum();
+            Status = (global::Game.Multigameplay.V1.GameplayStatus) input.ReadEnum();
             break;
           }
         }
       }
     }
     #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SubscribeAllocationEventsRequest : pb::IMessage<SubscribeAllocationEventsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SubscribeAllocationEventsRequest> _parser = new pb::MessageParser<SubscribeAllocationEventsRequest>(() => new SubscribeAllocationEventsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SubscribeAllocationEventsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubscribeAllocationEventsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubscribeAllocationEventsRequest(SubscribeAllocationEventsRequest other) : this() {
+      lobbyId_ = other.lobbyId_;
+      clientId_ = other.clientId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubscribeAllocationEventsRequest Clone() {
+      return new SubscribeAllocationEventsRequest(this);
+    }
+
+    /// <summary>Field number for the "lobby_id" field.</summary>
+    public const int LobbyIdFieldNumber = 1;
+    private int lobbyId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LobbyId {
+      get { return lobbyId_; }
+      set {
+        lobbyId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_id" field.</summary>
+    public const int ClientIdFieldNumber = 2;
+    private int clientId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ClientId {
+      get { return clientId_; }
+      set {
+        clientId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SubscribeAllocationEventsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SubscribeAllocationEventsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LobbyId != other.LobbyId) return false;
+      if (ClientId != other.ClientId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LobbyId != 0) hash ^= LobbyId.GetHashCode();
+      if (ClientId != 0) hash ^= ClientId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LobbyId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(LobbyId);
+      }
+      if (ClientId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ClientId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LobbyId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(LobbyId);
+      }
+      if (ClientId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ClientId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LobbyId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LobbyId);
+      }
+      if (ClientId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ClientId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SubscribeAllocationEventsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LobbyId != 0) {
+        LobbyId = other.LobbyId;
+      }
+      if (other.ClientId != 0) {
+        ClientId = other.ClientId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LobbyId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            ClientId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LobbyId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            ClientId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AllocationEvent : pb::IMessage<AllocationEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AllocationEvent> _parser = new pb::MessageParser<AllocationEvent>(() => new AllocationEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AllocationEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AllocationEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AllocationEvent(AllocationEvent other) : this() {
+      type_ = other.type_;
+      allocationId_ = other.allocationId_;
+      lobbyId_ = other.lobbyId_;
+      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+      allocation_ = other.allocation_ != null ? other.allocation_.Clone() : null;
+      newStatus_ = other.newStatus_;
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AllocationEvent Clone() {
+      return new AllocationEvent(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::Game.Multigameplay.V1.AllocationEvent.Types.EventType type_ = global::Game.Multigameplay.V1.AllocationEvent.Types.EventType.AllocationCreated;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Game.Multigameplay.V1.AllocationEvent.Types.EventType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allocation_id" field.</summary>
+    public const int AllocationIdFieldNumber = 2;
+    private string allocationId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AllocationId {
+      get { return allocationId_; }
+      set {
+        allocationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "lobby_id" field.</summary>
+    public const int LobbyIdFieldNumber = 3;
+    private int lobbyId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LobbyId {
+      get { return lobbyId_; }
+      set {
+        lobbyId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allocation" field.</summary>
+    public const int AllocationFieldNumber = 5;
+    private global::Game.Multigameplay.V1.AllocationInfo allocation_;
+    /// <summary>
+    /// Created, Ready
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Game.Multigameplay.V1.AllocationInfo Allocation {
+      get { return allocation_; }
+      set {
+        allocation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "new_status" field.</summary>
+    public const int NewStatusFieldNumber = 6;
+    private global::Game.Multigameplay.V1.GameplayStatus newStatus_ = global::Game.Multigameplay.V1.GameplayStatus.Unknown;
+    /// <summary>
+    /// Status changed
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Game.Multigameplay.V1.GameplayStatus NewStatus {
+      get { return newStatus_; }
+      set {
+        newStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 7;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// Failed
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AllocationEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AllocationEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      if (AllocationId != other.AllocationId) return false;
+      if (LobbyId != other.LobbyId) return false;
+      if (!object.Equals(Timestamp, other.Timestamp)) return false;
+      if (!object.Equals(Allocation, other.Allocation)) return false;
+      if (NewStatus != other.NewStatus) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type != global::Game.Multigameplay.V1.AllocationEvent.Types.EventType.AllocationCreated) hash ^= Type.GetHashCode();
+      if (AllocationId.Length != 0) hash ^= AllocationId.GetHashCode();
+      if (LobbyId != 0) hash ^= LobbyId.GetHashCode();
+      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+      if (allocation_ != null) hash ^= Allocation.GetHashCode();
+      if (NewStatus != global::Game.Multigameplay.V1.GameplayStatus.Unknown) hash ^= NewStatus.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Type != global::Game.Multigameplay.V1.AllocationEvent.Types.EventType.AllocationCreated) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (AllocationId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AllocationId);
+      }
+      if (LobbyId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LobbyId);
+      }
+      if (timestamp_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Timestamp);
+      }
+      if (allocation_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Allocation);
+      }
+      if (NewStatus != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) NewStatus);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Game.Multigameplay.V1.AllocationEvent.Types.EventType.AllocationCreated) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (AllocationId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AllocationId);
+      }
+      if (LobbyId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LobbyId);
+      }
+      if (timestamp_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Timestamp);
+      }
+      if (allocation_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Allocation);
+      }
+      if (NewStatus != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) NewStatus);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Type != global::Game.Multigameplay.V1.AllocationEvent.Types.EventType.AllocationCreated) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (AllocationId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AllocationId);
+      }
+      if (LobbyId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LobbyId);
+      }
+      if (timestamp_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+      }
+      if (allocation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Allocation);
+      }
+      if (NewStatus != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NewStatus);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AllocationEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type != global::Game.Multigameplay.V1.AllocationEvent.Types.EventType.AllocationCreated) {
+        Type = other.Type;
+      }
+      if (other.AllocationId.Length != 0) {
+        AllocationId = other.AllocationId;
+      }
+      if (other.LobbyId != 0) {
+        LobbyId = other.LobbyId;
+      }
+      if (other.timestamp_ != null) {
+        if (timestamp_ == null) {
+          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        Timestamp.MergeFrom(other.Timestamp);
+      }
+      if (other.allocation_ != null) {
+        if (allocation_ == null) {
+          Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
+        }
+        Allocation.MergeFrom(other.Allocation);
+      }
+      if (other.NewStatus != global::Game.Multigameplay.V1.GameplayStatus.Unknown) {
+        NewStatus = other.NewStatus;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Type = (global::Game.Multigameplay.V1.AllocationEvent.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            AllocationId = input.ReadString();
+            break;
+          }
+          case 24: {
+            LobbyId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
+            break;
+          }
+          case 42: {
+            if (allocation_ == null) {
+              Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
+            }
+            input.ReadMessage(Allocation);
+            break;
+          }
+          case 48: {
+            NewStatus = (global::Game.Multigameplay.V1.GameplayStatus) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Game.Multigameplay.V1.AllocationEvent.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            AllocationId = input.ReadString();
+            break;
+          }
+          case 24: {
+            LobbyId = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
+            break;
+          }
+          case 42: {
+            if (allocation_ == null) {
+              Allocation = new global::Game.Multigameplay.V1.AllocationInfo();
+            }
+            input.ReadMessage(Allocation);
+            break;
+          }
+          case 48: {
+            NewStatus = (global::Game.Multigameplay.V1.GameplayStatus) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AllocationEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum EventType {
+        [pbr::OriginalName("ALLOCATION_CREATED")] AllocationCreated = 0,
+        [pbr::OriginalName("ALLOCATION_READY")] AllocationReady = 1,
+        [pbr::OriginalName("ALLOCATION_DELETED")] AllocationDeleted = 2,
+        [pbr::OriginalName("ALLOCATION_FAILED")] AllocationFailed = 3,
+        [pbr::OriginalName("ALLOCATION_STATUS_CHANGED")] AllocationStatusChanged = 4,
+      }
+
+    }
+    #endregion
 
   }
 

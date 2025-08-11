@@ -1,11 +1,14 @@
-ï»¿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Game.Client.GameObjects.Characters;
 using Game.Client.Models;
 using Game.Client.Network;
-using Game.MultiGamePlay;
+using Game.Multigameplay.V1;
+using Grpc.Core;
 using Newtonsoft.Json;
+using NUnit.Framework.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,24 +18,29 @@ namespace Game.Client.Controllers
     {
         public AllocationInfo currentAllocation { get; private set; }
         public string currentMatchId { get; private set; }
-
         public GameplayStatus currentStatus { get; private set; }
+
 
         [SerializeField] Player _playerPrefab;
         private Player _player;
         private MultiGamePlayService.MultiGamePlayServiceClient _multiGameplayClient;
         private MultiplaySettings _multiplaySettings;
+        private AsyncServerStreamingCall<AllocationEvent> _eventStream;
+        private CancellationTokenSource _cts;
 
-        public event Action<AllocationInfo> onMultiGameplayServerReady;
-        public event Action<string> onMultiGameplayServerAllocationError;
-        public event Action<GameplayStatus> onStatusChanged;
+        public event Action<AllocationInfo> onAllocationCreated;
+        public event Action<AllocationInfo> onAllocationReady;
+        public event Action onAllocationDeleted;
+        public event Action<string> onAllocationFailed;
+        public event Action<GameplayStatus> onAllocationGameplayStatusChanged;
 
         public record AllocationPayload
         {
             public int lobbyId { get; set; }
             public List<int> clientIds { get; set; }
-            public Dictionary<string, string> gameSettiings { get; set; }
+            public Dictionary<string, string> gameSettings { get; set; }
         }
+
 
         private async void Start()
         {
@@ -49,30 +57,43 @@ namespace Game.Client.Controllers
 #else
             _multiplaySettings = Resources.Load<MultiplaySettings>("Network/MultiplaySettings_Release");
 #endif
-            var allocateResponse = await AllocateAsync();
 
-            if (!allocateResponse.success)
-                throw new Exception(); // TODO : ì¬ì‹œë„ ë° ì˜ˆì™¸ì²˜ë¦¬, ë¡œë¹„ë³µê·€ ë“± í•´ì•¼í•¨
+            SubscribeToAllocationEvents();
 
+            // TODO : ¸ğµç Client °¡ ±¸µ¶ ¿Ï·áµÉ¶§±îÁö ±â´Ù¸²
 
-            await UpdateStatusAsync(GameplayStatus.Starting);
-            await Awaitable.MainThreadAsync();
-            _player = Instantiate(_playerPrefab);
-            _player.onStatusChanged += OnPlayerStatusChanged;
+            if (MultiplayMatchBlackboard.isMaster)
+            {
+                var allocateResponse = await AllocateAsync(); // Å¬¶óÀÌ¾ğÆ®°¡ Á÷Á¢ Allocation ¿äÃ»ÇÏ´Â·ÎÁ÷º¸´Ù´Â ¼­¹ö°¡ »óÅÂ È®ÀÎÇÏ¸é¼­ ¾Ë¾Æ¼­ Ã³¸®ÇÏ´Â°Ô º¸¾È»ó ³ªÀ½
+
+                if (!allocateResponse.success)
+                    throw new Exception(allocateResponse.message); // TODO : Àç½Ãµµ ¹× ¿¹¿ÜÃ³¸®, ·Îºñº¹±Í µî ÇØ¾ßÇÔ
+
+                await UpdateStatusAsync(GameplayStatus.Starting);
+            }
+
+        }
+
+        private async void OnApplicationQuit()
+        {
+            await _multiGameplayClient.DeleteAllocationAsync(new DeleteAllocationRequest
+            {
+                AllocationId = currentMatchId,
+            });
         }
 
         private async void OnPlayerStatusChanged(PlayerStatus before, PlayerStatus after)
         {
-            // TODO : 
-            // ì¼ë‹¨ í´ë¼ì´ì–¸íŠ¸ê°€ ê²Œì„ìƒíƒœë¥¼ ì§ì ‘ ë³€ê²½í•˜ëŠ” ì»¨ì…‰ì¸ë°..
-            // í”Œë ˆì´ì–´ ìƒíƒœê°’ì„ ì„œë²„ì— ì£¼ë©´, ì„œë²„ê°€ ì•Œì•„ì„œ ìƒíƒœë¥¼ ë³€ê²½í•˜ê³  í†µì§€í•˜ëŠ” Server-streaming ìœ¼ë¡œ ë°”ê¿€í•„ìš”ê°€ìˆìŒ.
+            // TODO :
+            // ÀÏ´Ü Å¬¶óÀÌ¾ğÆ®°¡ °ÔÀÓ»óÅÂ¸¦ Á÷Á¢ º¯°æÇÏ´Â ÄÁ¼ÁÀÎµ¥.. 
+            // ÇÃ·¹ÀÌ¾î »óÅÂ°ªÀ» ¼­¹ö¿¡ ÁÖ¸é, ¼­¹ö°¡ ¾Ë¾Æ¼­ »óÅÂ¸¦ º¯°æÇÏ°í ÅëÁöÇÏ´Â Server-streaming À¸·Î ¹Ù²ÜÇÊ¿ä°¡ÀÖÀ½.
 
-            // ready ë¨
+            // ready µÊ
             if (!before.isReady && after.isReady)
             {
                 await UpdateStatusAsync(GameplayStatus.Ready);
             }
-            // ëë‚¨
+            // ³¡³²
             if (!before.isFinished && after.isFinished)
             {
                 await UpdateStatusAsync(GameplayStatus.Ending);
@@ -82,17 +103,15 @@ namespace Game.Client.Controllers
             }
         }
 
-        
-
-        public async Task<(bool success, string message, string allocation)> AllocateAsync()
+        public async Task<(bool success, string message, string allocationId)> AllocateAsync()
         {
             AllocationPayload payload = new AllocationPayload
             {
                 lobbyId = MultiplayMatchBlackboard.lobbyId,
                 clientIds = new List<int>(MultiplayMatchBlackboard.clientIds),
-                gameSettiings = new Dictionary<string, string>()
+                gameSettings = new Dictionary<string, string>()
                 {
-                    // TODO : setting ì— ì»¤ìŠ¤í…€ì„¸íŒ… ë°ì´í„° ì¶”ê°€í•˜ê³  ì´ê±° ì´ˆê¸°í™”í• ë•Œ ì¨ì•¼í•¨.
+                    // TODO : setting ¿¡ Ä¿½ºÅÒ¼¼ÆÃ µ¥ÀÌÅÍ Ãß°¡ÇÏ°í ÀÌ°Å ÃÊ±âÈ­ÇÒ¶§ ½á¾ßÇÔ.
                 }
             };
 
@@ -114,20 +133,17 @@ namespace Game.Client.Controllers
                     currentAllocation = response.Allocation;
                     currentMatchId = response.Allocation.AllocationId;
 
-                    onMultiGameplayServerReady?.Invoke(currentAllocation);
                     return (true, "Allocated game server.", currentAllocation.AllocationId);
                 }
                 else
                 {
                     string message = "Failed to allocate game server.";
-                    onMultiGameplayServerAllocationError?.Invoke(message);
                     return (false, message, null);
                 }
             }
             catch (Exception ex)
             {
-                string message = $"Failed to allocate game server.\n{ex.Message}.";
-                onMultiGameplayServerAllocationError?.Invoke(message);
+                string message = $"Failed to allocate game server\n{ex.Message}.";
                 return (false, message, null);
             }
         }
@@ -153,7 +169,7 @@ namespace Game.Client.Controllers
             }
         }
 
-        public async Task<(bool success, AllocationInfo allocation)> GetAllocation(string allocationId)
+        public async Task<(bool success, AllocationInfo allocatiion)> GetAllocation(string allocationId)
         {
             try
             {
@@ -214,18 +230,102 @@ namespace Game.Client.Controllers
                 await _multiGameplayClient.UpdateGameplayStatusAsync(new UpdateGameplayStatusRequest
                 {
                     AllocationId = currentMatchId,
-                    ServerId = currentAllocation.ServerId,
+                    LobbyId = MultiplayMatchBlackboard.lobbyId,
                     Status = newStatus
                 });
 
                 currentStatus = newStatus;
-                onStatusChanged?.Invoke(newStatus);
                 return (true, newStatus);
             }
             catch (Exception ex)
             {
                 return (false, GameplayStatus.Unknown);
             }
+        }
+
+        public void SubscribeToAllocationEvents()
+        {
+            try
+            {
+                _cts = new CancellationTokenSource();
+
+                _eventStream = _multiGameplayClient.SubscribeAllocationEvents(new SubscribeAllocationEventsRequest
+                {
+                    ClientId = GrpcConnection.clientInfo.ClientId,
+                    LobbyId = MultiplayMatchBlackboard.lobbyId,
+                }, cancellationToken: _cts.Token);
+
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await foreach (var e in _eventStream.ResponseStream.ReadAllAsync(_cts.Token))
+                        {
+                            HandleAllocationEvent(e);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Log("Error in allocationevent stream.");
+                    }
+                });
+
+                Debug.Log($"Subscribed to allocation event for lobby {MultiplayMatchBlackboard.lobbyId}");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Failed to subscribe to allocation event. {ex}");
+            }
+        }
+
+        /// <summary>
+        /// ÀÌ ÀÌº¥Æ®´Â ¸ŞÀÎ¾²·¹µå¿¡¼­ È£ÃâµÇÁö¾ÊÀ½.
+        /// À¯´ÏÆ¼ ·ÎÁ÷Àº µ¿±âÈ­Context ¸¦ ÅëÇØ Send/Post ÇÏ°Å³ª Unity Awaitable ·Î µ¿±âÈ­ ÇØÁÖ¾î¾ßÇÔ.
+        /// </summary>
+        /// <param name="e"></param>
+        async void HandleAllocationEvent(AllocationEvent e)
+        {
+            await Awaitable.MainThreadAsync();
+            Debug.Log($"AllocationEvent occurred: {e.Type}");
+
+            switch (e.Type)
+            {
+                case AllocationEvent.Types.EventType.AllocationCreated:
+                    {
+                        onAllocationCreated?.Invoke(e.Allocation);
+                    }
+                    break;
+                case AllocationEvent.Types.EventType.AllocationReady:
+                    {
+                        OnAllocationReady();
+                        onAllocationReady?.Invoke(e.Allocation);
+                    }
+                    break;
+                case AllocationEvent.Types.EventType.AllocationDeleted:
+                    {
+                        onAllocationDeleted?.Invoke();
+                    }
+                    break;
+                case AllocationEvent.Types.EventType.AllocationFailed:
+                    {
+                        onAllocationFailed?.Invoke(e.ErrorMessage);
+                    }
+                    break;
+                case AllocationEvent.Types.EventType.AllocationStatusChanged:
+                    {
+                        onAllocationGameplayStatusChanged?.Invoke(e.NewStatus);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        async void OnAllocationReady()
+        {
+            await Awaitable.MainThreadAsync();
+            _player = Instantiate(_playerPrefab);
+            _player.onStatusChanged += OnPlayerStatusChanged;
         }
     }
 }

@@ -1,4 +1,4 @@
-using Game.Client.Models;
+﻿using Game.Client.Models;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -33,7 +33,7 @@ namespace Game.Client.GameObjects.Characters
                 isFinished = false,
             });
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(300);
 
             ChangeStatus(new PlayerStatus
             {

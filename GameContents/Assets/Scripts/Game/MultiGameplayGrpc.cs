@@ -9,10 +9,10 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Game.MultiGamePlay {
+namespace Game.Multigameplay.V1 {
   public static partial class MultiGamePlayService
   {
-    static readonly string __ServiceName = "game.multiGamePlay.MultiGamePlayService";
+    static readonly string __ServiceName = "game.multigameplay.v1.MultiGamePlayService";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -48,68 +48,80 @@ namespace Game.MultiGamePlay {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.CreateAllocationRequest> __Marshaller_game_multiGamePlay_CreateAllocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.CreateAllocationRequest.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.CreateAllocationRequest> __Marshaller_game_multigameplay_v1_CreateAllocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.CreateAllocationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.CreateAllocationResponse> __Marshaller_game_multiGamePlay_CreateAllocationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.CreateAllocationResponse.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.CreateAllocationResponse> __Marshaller_game_multigameplay_v1_CreateAllocationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.CreateAllocationResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.DeleteAllocationRequest> __Marshaller_game_multiGamePlay_DeleteAllocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.DeleteAllocationRequest.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.DeleteAllocationRequest> __Marshaller_game_multigameplay_v1_DeleteAllocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.DeleteAllocationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.GetAllocationsRequest> __Marshaller_game_multiGamePlay_GetAllocationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.GetAllocationsRequest.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.GetAllocationsRequest> __Marshaller_game_multigameplay_v1_GetAllocationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.GetAllocationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.GetAllocationsResponse> __Marshaller_game_multiGamePlay_GetAllocationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.GetAllocationsResponse.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.GetAllocationsResponse> __Marshaller_game_multigameplay_v1_GetAllocationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.GetAllocationsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.GetAllocationRequest> __Marshaller_game_multiGamePlay_GetAllocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.GetAllocationRequest.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.GetAllocationRequest> __Marshaller_game_multigameplay_v1_GetAllocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.GetAllocationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.GetAllocationResponse> __Marshaller_game_multiGamePlay_GetAllocationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.GetAllocationResponse.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.GetAllocationResponse> __Marshaller_game_multigameplay_v1_GetAllocationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.GetAllocationResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Game.MultiGamePlay.UpdateGameplayStatusRequest> __Marshaller_game_multiGamePlay_UpdateGameplayStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.MultiGamePlay.UpdateGameplayStatusRequest.Parser));
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.UpdateGameplayStatusRequest> __Marshaller_game_multigameplay_v1_UpdateGameplayStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.UpdateGameplayStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest> __Marshaller_game_multigameplay_v1_SubscribeAllocationEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Game.Multigameplay.V1.AllocationEvent> __Marshaller_game_multigameplay_v1_AllocationEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Game.Multigameplay.V1.AllocationEvent.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Game.MultiGamePlay.CreateAllocationRequest, global::Game.MultiGamePlay.CreateAllocationResponse> __Method_CreateAllocation = new grpc::Method<global::Game.MultiGamePlay.CreateAllocationRequest, global::Game.MultiGamePlay.CreateAllocationResponse>(
+    static readonly grpc::Method<global::Game.Multigameplay.V1.CreateAllocationRequest, global::Game.Multigameplay.V1.CreateAllocationResponse> __Method_CreateAllocation = new grpc::Method<global::Game.Multigameplay.V1.CreateAllocationRequest, global::Game.Multigameplay.V1.CreateAllocationResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateAllocation",
-        __Marshaller_game_multiGamePlay_CreateAllocationRequest,
-        __Marshaller_game_multiGamePlay_CreateAllocationResponse);
+        __Marshaller_game_multigameplay_v1_CreateAllocationRequest,
+        __Marshaller_game_multigameplay_v1_CreateAllocationResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Game.MultiGamePlay.DeleteAllocationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAllocation = new grpc::Method<global::Game.MultiGamePlay.DeleteAllocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Game.Multigameplay.V1.DeleteAllocationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAllocation = new grpc::Method<global::Game.Multigameplay.V1.DeleteAllocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteAllocation",
-        __Marshaller_game_multiGamePlay_DeleteAllocationRequest,
+        __Marshaller_game_multigameplay_v1_DeleteAllocationRequest,
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Game.MultiGamePlay.GetAllocationsRequest, global::Game.MultiGamePlay.GetAllocationsResponse> __Method_GetAllocations = new grpc::Method<global::Game.MultiGamePlay.GetAllocationsRequest, global::Game.MultiGamePlay.GetAllocationsResponse>(
+    static readonly grpc::Method<global::Game.Multigameplay.V1.GetAllocationsRequest, global::Game.Multigameplay.V1.GetAllocationsResponse> __Method_GetAllocations = new grpc::Method<global::Game.Multigameplay.V1.GetAllocationsRequest, global::Game.Multigameplay.V1.GetAllocationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllocations",
-        __Marshaller_game_multiGamePlay_GetAllocationsRequest,
-        __Marshaller_game_multiGamePlay_GetAllocationsResponse);
+        __Marshaller_game_multigameplay_v1_GetAllocationsRequest,
+        __Marshaller_game_multigameplay_v1_GetAllocationsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Game.MultiGamePlay.GetAllocationRequest, global::Game.MultiGamePlay.GetAllocationResponse> __Method_GetAllocation = new grpc::Method<global::Game.MultiGamePlay.GetAllocationRequest, global::Game.MultiGamePlay.GetAllocationResponse>(
+    static readonly grpc::Method<global::Game.Multigameplay.V1.GetAllocationRequest, global::Game.Multigameplay.V1.GetAllocationResponse> __Method_GetAllocation = new grpc::Method<global::Game.Multigameplay.V1.GetAllocationRequest, global::Game.Multigameplay.V1.GetAllocationResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllocation",
-        __Marshaller_game_multiGamePlay_GetAllocationRequest,
-        __Marshaller_game_multiGamePlay_GetAllocationResponse);
+        __Marshaller_game_multigameplay_v1_GetAllocationRequest,
+        __Marshaller_game_multigameplay_v1_GetAllocationResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Game.MultiGamePlay.UpdateGameplayStatusRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdateGameplayStatus = new grpc::Method<global::Game.MultiGamePlay.UpdateGameplayStatusRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Game.Multigameplay.V1.UpdateGameplayStatusRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdateGameplayStatus = new grpc::Method<global::Game.Multigameplay.V1.UpdateGameplayStatusRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateGameplayStatus",
-        __Marshaller_game_multiGamePlay_UpdateGameplayStatusRequest,
+        __Marshaller_game_multigameplay_v1_UpdateGameplayStatusRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest, global::Game.Multigameplay.V1.AllocationEvent> __Method_SubscribeAllocationEvents = new grpc::Method<global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest, global::Game.Multigameplay.V1.AllocationEvent>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "SubscribeAllocationEvents",
+        __Marshaller_game_multigameplay_v1_SubscribeAllocationEventsRequest,
+        __Marshaller_game_multigameplay_v1_AllocationEvent);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Game.MultiGamePlay.MultiGameplayReflection.Descriptor.Services[0]; }
+      get { return global::Game.Multigameplay.V1.MultiGameplayReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of MultiGamePlayService</summary>
@@ -123,31 +135,31 @@ namespace Game.MultiGamePlay {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Game.MultiGamePlay.CreateAllocationResponse> CreateAllocation(global::Game.MultiGamePlay.CreateAllocationRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Game.Multigameplay.V1.CreateAllocationResponse> CreateAllocation(global::Game.Multigameplay.V1.CreateAllocationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// Dedicated Server Remove(할당) 해제 요청
+      /// Dedicated Server Remove(할당 해제) 요청
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllocation(global::Game.MultiGamePlay.DeleteAllocationRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllocation(global::Game.Multigameplay.V1.DeleteAllocationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// Dedicated Server Get Allocations(할당) 목록 읽기
+      /// Dedicated Server Get Allocations(할당 목록) 읽기
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Game.MultiGamePlay.GetAllocationsResponse> GetAllocations(global::Game.MultiGamePlay.GetAllocationsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Game.Multigameplay.V1.GetAllocationsResponse> GetAllocations(global::Game.Multigameplay.V1.GetAllocationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -159,20 +171,32 @@ namespace Game.MultiGamePlay {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Game.MultiGamePlay.GetAllocationResponse> GetAllocation(global::Game.MultiGamePlay.GetAllocationRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Game.Multigameplay.V1.GetAllocationResponse> GetAllocation(global::Game.Multigameplay.V1.GetAllocationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      /// Sever status 변경요청
-      ///==================================================
+      /// Server status 변경요청
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UpdateGameplayStatus(global::Game.MultiGamePlay.UpdateGameplayStatusRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UpdateGameplayStatus(global::Game.Multigameplay.V1.UpdateGameplayStatusRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// 구독 (Server-streaming)
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task SubscribeAllocationEvents(global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest request, grpc::IServerStreamWriter<global::Game.Multigameplay.V1.AllocationEvent> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -215,7 +239,7 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Game.MultiGamePlay.CreateAllocationResponse CreateAllocation(global::Game.MultiGamePlay.CreateAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Game.Multigameplay.V1.CreateAllocationResponse CreateAllocation(global::Game.Multigameplay.V1.CreateAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAllocation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -226,7 +250,7 @@ namespace Game.MultiGamePlay {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Game.MultiGamePlay.CreateAllocationResponse CreateAllocation(global::Game.MultiGamePlay.CreateAllocationRequest request, grpc::CallOptions options)
+      public virtual global::Game.Multigameplay.V1.CreateAllocationResponse CreateAllocation(global::Game.Multigameplay.V1.CreateAllocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAllocation, null, options, request);
       }
@@ -239,7 +263,7 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Game.MultiGamePlay.CreateAllocationResponse> CreateAllocationAsync(global::Game.MultiGamePlay.CreateAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Game.Multigameplay.V1.CreateAllocationResponse> CreateAllocationAsync(global::Game.Multigameplay.V1.CreateAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAllocationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -250,12 +274,12 @@ namespace Game.MultiGamePlay {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Game.MultiGamePlay.CreateAllocationResponse> CreateAllocationAsync(global::Game.MultiGamePlay.CreateAllocationRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Game.Multigameplay.V1.CreateAllocationResponse> CreateAllocationAsync(global::Game.Multigameplay.V1.CreateAllocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAllocation, null, options, request);
       }
       /// <summary>
-      /// Dedicated Server Remove(할당) 해제 요청
+      /// Dedicated Server Remove(할당 해제) 요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -263,23 +287,23 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAllocation(global::Game.MultiGamePlay.DeleteAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAllocation(global::Game.Multigameplay.V1.DeleteAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAllocation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Dedicated Server Remove(할당) 해제 요청
+      /// Dedicated Server Remove(할당 해제) 요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAllocation(global::Game.MultiGamePlay.DeleteAllocationRequest request, grpc::CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAllocation(global::Game.Multigameplay.V1.DeleteAllocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAllocation, null, options, request);
       }
       /// <summary>
-      /// Dedicated Server Remove(할당) 해제 요청
+      /// Dedicated Server Remove(할당 해제) 요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -287,23 +311,23 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllocationAsync(global::Game.MultiGamePlay.DeleteAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllocationAsync(global::Game.Multigameplay.V1.DeleteAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAllocationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Dedicated Server Remove(할당) 해제 요청
+      /// Dedicated Server Remove(할당 해제) 요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllocationAsync(global::Game.MultiGamePlay.DeleteAllocationRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAllocationAsync(global::Game.Multigameplay.V1.DeleteAllocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAllocation, null, options, request);
       }
       /// <summary>
-      /// Dedicated Server Get Allocations(할당) 목록 읽기
+      /// Dedicated Server Get Allocations(할당 목록) 읽기
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -311,23 +335,23 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Game.MultiGamePlay.GetAllocationsResponse GetAllocations(global::Game.MultiGamePlay.GetAllocationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Game.Multigameplay.V1.GetAllocationsResponse GetAllocations(global::Game.Multigameplay.V1.GetAllocationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllocations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Dedicated Server Get Allocations(할당) 목록 읽기
+      /// Dedicated Server Get Allocations(할당 목록) 읽기
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Game.MultiGamePlay.GetAllocationsResponse GetAllocations(global::Game.MultiGamePlay.GetAllocationsRequest request, grpc::CallOptions options)
+      public virtual global::Game.Multigameplay.V1.GetAllocationsResponse GetAllocations(global::Game.Multigameplay.V1.GetAllocationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllocations, null, options, request);
       }
       /// <summary>
-      /// Dedicated Server Get Allocations(할당) 목록 읽기
+      /// Dedicated Server Get Allocations(할당 목록) 읽기
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -335,18 +359,18 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Game.MultiGamePlay.GetAllocationsResponse> GetAllocationsAsync(global::Game.MultiGamePlay.GetAllocationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Game.Multigameplay.V1.GetAllocationsResponse> GetAllocationsAsync(global::Game.Multigameplay.V1.GetAllocationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllocationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Dedicated Server Get Allocations(할당) 목록 읽기
+      /// Dedicated Server Get Allocations(할당 목록) 읽기
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Game.MultiGamePlay.GetAllocationsResponse> GetAllocationsAsync(global::Game.MultiGamePlay.GetAllocationsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Game.Multigameplay.V1.GetAllocationsResponse> GetAllocationsAsync(global::Game.Multigameplay.V1.GetAllocationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllocations, null, options, request);
       }
@@ -359,7 +383,7 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Game.MultiGamePlay.GetAllocationResponse GetAllocation(global::Game.MultiGamePlay.GetAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Game.Multigameplay.V1.GetAllocationResponse GetAllocation(global::Game.Multigameplay.V1.GetAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllocation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -370,7 +394,7 @@ namespace Game.MultiGamePlay {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Game.MultiGamePlay.GetAllocationResponse GetAllocation(global::Game.MultiGamePlay.GetAllocationRequest request, grpc::CallOptions options)
+      public virtual global::Game.Multigameplay.V1.GetAllocationResponse GetAllocation(global::Game.Multigameplay.V1.GetAllocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllocation, null, options, request);
       }
@@ -383,7 +407,7 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Game.MultiGamePlay.GetAllocationResponse> GetAllocationAsync(global::Game.MultiGamePlay.GetAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Game.Multigameplay.V1.GetAllocationResponse> GetAllocationAsync(global::Game.Multigameplay.V1.GetAllocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllocationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -394,13 +418,12 @@ namespace Game.MultiGamePlay {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Game.MultiGamePlay.GetAllocationResponse> GetAllocationAsync(global::Game.MultiGamePlay.GetAllocationRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Game.Multigameplay.V1.GetAllocationResponse> GetAllocationAsync(global::Game.Multigameplay.V1.GetAllocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllocation, null, options, request);
       }
       /// <summary>
-      /// Sever status 변경요청
-      ///==================================================
+      /// Server status 변경요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -408,25 +431,23 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdateGameplayStatus(global::Game.MultiGamePlay.UpdateGameplayStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdateGameplayStatus(global::Game.Multigameplay.V1.UpdateGameplayStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGameplayStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sever status 변경요청
-      ///==================================================
+      /// Server status 변경요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdateGameplayStatus(global::Game.MultiGamePlay.UpdateGameplayStatusRequest request, grpc::CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdateGameplayStatus(global::Game.Multigameplay.V1.UpdateGameplayStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGameplayStatus, null, options, request);
       }
       /// <summary>
-      /// Sever status 변경요청
-      ///==================================================
+      /// Server status 변경요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -434,21 +455,44 @@ namespace Game.MultiGamePlay {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdateGameplayStatusAsync(global::Game.MultiGamePlay.UpdateGameplayStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdateGameplayStatusAsync(global::Game.Multigameplay.V1.UpdateGameplayStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGameplayStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sever status 변경요청
-      ///==================================================
+      /// Server status 변경요청
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdateGameplayStatusAsync(global::Game.MultiGamePlay.UpdateGameplayStatusRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdateGameplayStatusAsync(global::Game.Multigameplay.V1.UpdateGameplayStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGameplayStatus, null, options, request);
+      }
+      /// <summary>
+      /// 구독 (Server-streaming)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Game.Multigameplay.V1.AllocationEvent> SubscribeAllocationEvents(global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubscribeAllocationEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// 구독 (Server-streaming)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Game.Multigameplay.V1.AllocationEvent> SubscribeAllocationEvents(global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_SubscribeAllocationEvents, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -468,7 +512,8 @@ namespace Game.MultiGamePlay {
           .AddMethod(__Method_DeleteAllocation, serviceImpl.DeleteAllocation)
           .AddMethod(__Method_GetAllocations, serviceImpl.GetAllocations)
           .AddMethod(__Method_GetAllocation, serviceImpl.GetAllocation)
-          .AddMethod(__Method_UpdateGameplayStatus, serviceImpl.UpdateGameplayStatus).Build();
+          .AddMethod(__Method_UpdateGameplayStatus, serviceImpl.UpdateGameplayStatus)
+          .AddMethod(__Method_SubscribeAllocationEvents, serviceImpl.SubscribeAllocationEvents).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -478,11 +523,12 @@ namespace Game.MultiGamePlay {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MultiGamePlayServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_CreateAllocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.MultiGamePlay.CreateAllocationRequest, global::Game.MultiGamePlay.CreateAllocationResponse>(serviceImpl.CreateAllocation));
-      serviceBinder.AddMethod(__Method_DeleteAllocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.MultiGamePlay.DeleteAllocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAllocation));
-      serviceBinder.AddMethod(__Method_GetAllocations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.MultiGamePlay.GetAllocationsRequest, global::Game.MultiGamePlay.GetAllocationsResponse>(serviceImpl.GetAllocations));
-      serviceBinder.AddMethod(__Method_GetAllocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.MultiGamePlay.GetAllocationRequest, global::Game.MultiGamePlay.GetAllocationResponse>(serviceImpl.GetAllocation));
-      serviceBinder.AddMethod(__Method_UpdateGameplayStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.MultiGamePlay.UpdateGameplayStatusRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdateGameplayStatus));
+      serviceBinder.AddMethod(__Method_CreateAllocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.Multigameplay.V1.CreateAllocationRequest, global::Game.Multigameplay.V1.CreateAllocationResponse>(serviceImpl.CreateAllocation));
+      serviceBinder.AddMethod(__Method_DeleteAllocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.Multigameplay.V1.DeleteAllocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAllocation));
+      serviceBinder.AddMethod(__Method_GetAllocations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.Multigameplay.V1.GetAllocationsRequest, global::Game.Multigameplay.V1.GetAllocationsResponse>(serviceImpl.GetAllocations));
+      serviceBinder.AddMethod(__Method_GetAllocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.Multigameplay.V1.GetAllocationRequest, global::Game.Multigameplay.V1.GetAllocationResponse>(serviceImpl.GetAllocation));
+      serviceBinder.AddMethod(__Method_UpdateGameplayStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Game.Multigameplay.V1.UpdateGameplayStatusRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdateGameplayStatus));
+      serviceBinder.AddMethod(__Method_SubscribeAllocationEvents, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Game.Multigameplay.V1.SubscribeAllocationEventsRequest, global::Game.Multigameplay.V1.AllocationEvent>(serviceImpl.SubscribeAllocationEvents));
     }
 
   }
